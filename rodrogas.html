@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rodrigo Cuadros Ccapa - Leyenda Inmortal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #1e1b4b, #000);
+      color: #fff;
+      font-family: 'Impact', sans-serif;
+      text-align: center;
+    }
+    .glow {
+      text-shadow: 0 0 5px #fff, 0 0 10px #facc15, 0 0 15px #facc15;
+    }
+    .img-glow {
+      box-shadow: 0 0 25px 5px #22d3ee;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-center items-center p-6">
+
+  <!-- AUDIO oculto -->
+  <audio id="audio" loop>
+    <source src="trompeta.mp3" type="audio/mpeg" />
+    Tu navegador no soporta audio.
+  </audio>
+
+  <!-- BOTÓN -->
+  <button onclick="iniciarHomenaje()" class="bg-yellow-400 text-black font-bold py-3 px-6 rounded-full text-xl shadow-lg hover:bg-yellow-300 transition mb-8">
+    🎺 Iniciar Homenaje
+  </button>
+
+  <!-- CONTENIDO HOMENAJE -->
+  <div id="contenido" class="hidden flex-col items-center">
+    <h1 class="text-5xl md:text-6xl text-yellow-400 glow mb-4">El cielo ganó un ángel</h1>
+
+    <img src="rodrigo.png" alt="Rodrigo Cuadros Ccapa" class="rounded-full w-72 h-72 object-cover img-glow mb-6" />
+
+    <h2 class="text-3xl text-pink-500 mb-2 glow">Rodrigo Cuadros Ccapa</h2>
+    <p class="text-xl text-white italic mb-6">"No te tocaba mi neto"</p>
+
+    <p class="text-sm text-gray-300 uppercase tracking-wider">Siempre real. Siempre en el cielo. 🌌</p>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    function iniciarHomenaje() {
+      const audio = document.getElementById("audio");
+      audio.play();
+      document.getElementById("contenido").classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
